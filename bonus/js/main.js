@@ -28,10 +28,10 @@ for (i=19; i<=36; i++){
 
 for (i=1; i<=36; i++){
     
-    const faceUpCard = document.querySelector(`article.card${i}`);
+    const cardBox = document.querySelector(`article.card${i}`);
     const card = document.querySelector(`article.card${i} img`);
 
-    faceUpCard.addEventListener ('click',
+    cardBox.addEventListener ('click',
         function(){
             card.classList.add(`faceUp`);
 
