@@ -1,7 +1,7 @@
 const myMain = document.querySelector("main");
 const classChecker = document.createElement('div');
 
-
+// creo e distribuisco 36 carte in modo randomico
 for (i=1; i<=36; i++){
 
     var cardNumber = Math.floor((Math.random()*100) + 1) ;
@@ -20,12 +20,13 @@ for (i=1; i<=36; i++){
     }
 }
 
+// cambio la classe delle ultime 18 carte e la rendo uguale alle prime 18 così ho 18 classi, ciascuna su due carte
 for (i=19; i<=36; i++){
     const card = document.querySelector(`img.card${i}`);
     card.classList.replace(`card${i}`, `card${i-18}`);
 }
 
-
+// se clicco su una carta questa si scopre. Quando clicco sulla seconda: se è uguale alla prima restano scoperte tutte e due, altrimenti tornano nascoste entrambe
 for (i=1; i<=36; i++){
     
     const cardBox = document.querySelector(`article.card${i}`);
